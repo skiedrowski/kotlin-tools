@@ -32,7 +32,7 @@ subprojects {
 		}
 	}
 
-	version = '0.2'
+	version = '0.3'
 	group = "com.github.skiedrowski.tools"
 
 	repositories {
@@ -41,6 +41,15 @@ subprojects {
 
 	dependencies {
 		compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+		testCompile "junit:junit:$ver.junit"
+		testCompile "com.nhaarman:mockito-kotlin:$ver.mockito_kotlin"
+		// kotlin-reflect is (just) used by mockito-kotlin
+		testCompile "org.jetbrains.kotlin:kotlin-reflect"
+		testCompile "com.natpryce:hamkrest:$ver.hamkrest"
+		testCompile("org.mockito:mockito-core:$ver.mockito") {
+			exclude group: "org.hamcrest"
+		}
 	}
 
 	apply from: "$buildscriptDir/sourcesJar.gradle"
