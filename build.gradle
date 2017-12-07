@@ -1,0 +1,56 @@
+buildscript {
+	ext.kotlin_version = '1.2.0'
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+}
+
+description = """collection (?) of kotlin-related tools"""
+
+def buildscriptDir = "$rootProject.projectDir/buildscripts"
+
+apply from: "$buildscriptDir/loadEnvironment.gradle"
+apply from: "$buildscriptDir/printGradleInfo.gradle"
+apply from: "$buildscriptDir/loadVersions.gradle"
+apply from: "$buildscriptDir/jacocoMultimodule.gradle"
+
+subprojects {
+	apply plugin: 'kotlin'
+
+	tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+		kotlinOptions {
+			apiVersion = "1.2"
+			languageVersion = "1.2"
+			jvmTarget = "1.8"
+			noReflect = true
+			noStdlib = true
+		}
+	}
+
+	version = '0.1-SNAPSHOT'
+	group = "com.github.skiedrowski.tools"
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+	}
+
+	apply from: "$buildscriptDir/sourcesJar.gradle"
+	apply from: "$buildscriptDir/testJar.gradle"
+	apply from: "$buildscriptDir/javadocJar.gradle"
+
+	test.maxParallelForks = Runtime.runtime.availableProcessors()
+
+	apply from: "$buildscriptDir/ignoreTestFailuresIfConfiguredInEnv.gradle"
+	apply from: "$buildscriptDir/mavenPublish.gradle"
+}
+apply from: "$buildscriptDir/fixJenkins.gradle"
+apply from: "$buildscriptDir/wrapper.gradle"
