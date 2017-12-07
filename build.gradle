@@ -32,7 +32,7 @@ subprojects {
 		}
 	}
 
-	version = '0.1'
+	version = '0.2'
 	group = "com.github.skiedrowski.tools"
 
 	repositories {
