@@ -19,7 +19,7 @@ see http://kotlinlang.org/docs/reference/compiler-plugins.html
 Configuration in `build.gradle`
 
 	buildscript {
-		ext.kotlin_version = '1.2.0'
+		ext.kotlin_version = '1.2.31'
 
 		repositories {
 			mavenCentral()
