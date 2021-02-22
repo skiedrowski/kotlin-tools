@@ -9,6 +9,9 @@ buildscript {
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 	}
 }
+plugins {
+	id("maven-publish")
+}
 
 description = """collection (?) of kotlin-related tools"""
 
@@ -32,7 +35,7 @@ subprojects {
 		}
 	}
 
-//	version = '0.5'
+//	version = '20210222'
 	version = 'NEXT-SNAPSHOT'
 	group = "com.github.skiedrowski.tools"
 
@@ -60,7 +63,7 @@ subprojects {
 	test.maxParallelForks = Runtime.runtime.availableProcessors()
 
 	apply from: "$buildscriptDir/ignoreTestFailuresIfConfiguredInEnv.gradle"
-	apply from: "$buildscriptDir/mavenPublish.gradle"
+	apply from: "$buildscriptDir/mavenPublishGithubPackages.gradle"
 }
 apply from: "$buildscriptDir/fixJenkins.gradle"
 apply from: "$buildscriptDir/wrapper.gradle"
