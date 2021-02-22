@@ -1,9 +1,9 @@
 # Collection (not yet) of Kotlin-related tools
 
-published in my bintray repo
+published in my github packages repo
 
 	repositories {
-    	maven { url "https://dl.bintray.com/skiedrowski/maven" }
+    	maven { url "https://maven.pkg.github.com/skiedrowski/rest-tools" }
     }
     	
     dependencies {

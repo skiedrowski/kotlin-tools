@@ -29,14 +29,17 @@ subprojects {
 		kotlinOptions {
 			apiVersion = "1.4"
 			languageVersion = "1.4"
+			//default suppressWarnings = false
+			//default verbose = false
 			jvmTarget = "1.8"
 			noReflect = true
 			noStdlib = true
 		}
 	}
 
-//	version = '20210222'
 	version = 'NEXT-SNAPSHOT'
+//	version = '20210222'
+
 	group = "com.github.skiedrowski.tools"
 
 	repositories {
