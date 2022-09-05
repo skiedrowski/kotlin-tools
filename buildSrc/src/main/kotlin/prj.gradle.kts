@@ -15,8 +15,6 @@ plugins {
     id("aspect.intern.mvnpublish")
 }
 
-
-
 val config = rootProject.extra["config"] as Map<String, *>
 
 repositories {
@@ -25,11 +23,12 @@ repositories {
 
 dependencies {
     testFixturesApi(Deps.junit)
+    testFixturesApi(Deps.junit_engine)
 }
 
 tasks.withType<Test> {
     ignoreFailures = config["ignoreTestFailures"] as Boolean
     maxParallelForks = if (filter.includePatterns.isEmpty()) Runtime.getRuntime().availableProcessors() else 1
 
-//    useJUnitPlatform()
+    useJUnitPlatform()
 }

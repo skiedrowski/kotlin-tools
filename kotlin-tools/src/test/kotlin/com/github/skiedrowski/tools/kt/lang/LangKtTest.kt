@@ -1,7 +1,8 @@
 package com.github.skiedrowski.tools.kt.lang
 
 import io.kotest.matchers.shouldNotBe
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import java.io.FileNotFoundException
 
 class LangKtTest {
@@ -12,8 +13,10 @@ class LangKtTest {
         resourceFile shouldNotBe null
     }
 
-    @Test(expected = FileNotFoundException::class)
+    @Test
     fun getResourceFileNonexistant() {
-        LangKtTest::class.java.getResourceFile("LangKtTestResourceXXXXXX.txt")
+        assertThrows<FileNotFoundException> {
+            LangKtTest::class.java.getResourceFile("LangKtTestResourceXXXXXX.txt")
+        }
     }
 }

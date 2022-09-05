@@ -2,7 +2,7 @@ package com.github.skiedrowski.tools.kt.hash
 
 import io.kotest.assertions.withClue
 import io.kotest.matchers.shouldBe
-import org.junit.Test
+import org.junit.jupiter.api.Test
 
 class SHA256HashTest {
 
