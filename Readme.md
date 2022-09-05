@@ -1,16 +1,4 @@
-# Collection (not yet) of Kotlin-related tools
-
-published in my github packages repo
-
-	repositories {
-    	maven { url "https://maven.pkg.github.com/skiedrowski/rest-tools" }
-    }
-    	
-    dependencies {
-     	compile "com.github.skiedrowski.tools:kotlin-tools:$ver.kt_tools"
-    }
-    
-Bintray file upload path: `com/github/skiedrowski/tools/kotlin-tools/VERSION`
+# Collection of Kotlin-related tools
 
 ## Annotations for compiler plugins
 
