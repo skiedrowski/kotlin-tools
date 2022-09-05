@@ -3,19 +3,15 @@ object Ver {
 
     //test
     const val junit = "4.+"
-    const val hamkrest = "1.4.+"
-    const val mockito = "2.9.+"
-    const val mockito_kotlin = "1.5.+"
+    const val mockk = "1.12.7"
+    const val kotest_assertions = "5.4.2"
 }
 
 object Deps {
     const val kt_stdlib_jdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Ver.kotlin}"
 
     const val junit = "junit:junit:${Ver.junit}"
-    const val mockito_kotlin = "com.nhaarman:mockito-kotlin:${Ver.mockito_kotlin}"
 
-    // kotlin-reflect is (just) used by mockito-kotlin
-    const val kt_reflect = "org.jetbrains.kotlin:kotlin-reflect:${Ver.kotlin}"
-    const val hamkrest = "com.natpryce:hamkrest:${Ver.hamkrest}"
-    const val mockito = "org.mockito:mockito-core:${Ver.mockito}"
+    const val mockk = "io.mockk:mockk:${Ver.mockk}"
+    const val kotest_assertions = "io.kotest:kotest-assertions-core:${Ver.kotest_assertions}"
 }

@@ -41,10 +41,10 @@ dependencies {
 
     // kotlin-reflect is (just) used by mockito-kotlin. However the version should match kotlin version, so we need
     // to explicitly to avoid conflicting versions on the (test) classpath
-    testFixturesApi(Deps.kt_reflect)
-    testFixturesApi(Deps.mockito_kotlin)
-    testFixturesApi(Deps.hamkrest)
+//    testFixturesApi(Deps.kt_reflect)
+//    testFixturesApi(Deps.mockito_kotlin)
+//    testFixturesApi(Deps.hamkrest)
 
-//    testFixturesApi(Deps.mockk)
-//    testFixturesApi(Deps.kotest_assertions)
+    testFixturesApi(Deps.mockk)
+    testFixturesApi(Deps.kotest_assertions)
 }
