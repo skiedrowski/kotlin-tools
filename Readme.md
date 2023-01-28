@@ -1,3 +1,11 @@
+>
+> This repo is superseded by skiedrowski/sktooling.
+>
+> I will not update this repo any more.
+>
+
+
+
 # Collection of Kotlin-related tools
 
 ## Annotations for compiler plugins
