@@ -3,13 +3,12 @@ repositories {
 }
 
 plugins {
-//    `groovy-gradle-plugin` //for src/main/groovy
-    `kotlin-dsl` //for src/main/kotlin
+    `kotlin-dsl`
 }
 
 dependencies {
     //cannot use Deps here
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
-    implementation("org.jetbrains.kotlin:kotlin-noarg:1.7.10")
-    implementation("org.jetbrains.kotlin:kotlin-allopen:1.7.10")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0") //version must match Deps.kotlin
+    implementation("org.jetbrains.kotlin:kotlin-noarg:1.8.0") //version must match Deps.kotlin
+    implementation("org.jetbrains.kotlin:kotlin-allopen:1.8.0") //version must match Deps.kotlin
 }

@@ -12,7 +12,8 @@ plugins {
     id("aspect.intern.sourcejar")
     id("aspect.intern.testjar")
     id("aspect.intern.javadocjar")
-    id("aspect.intern.mvnpublish")
+//    id("aspect.intern.mvnpublish")
+    id("aspect.intern.mvnpublish_gh")
 }
 
 val config = rootProject.extra["config"] as Map<String, *>

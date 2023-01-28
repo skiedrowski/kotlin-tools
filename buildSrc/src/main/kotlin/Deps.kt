@@ -1,10 +1,10 @@
 object Ver {
-    const val kotlin = "1.7.10" //also update buildSrc/build.gradle.kts
+    const val kotlin = "1.8.0" //also update buildSrc/build.gradle.kts
 
     //test
-    const val junit = "5.8.+"
-    const val mockk = "1.12.7"
-    const val kotest_assertions = "5.4.2"
+    const val junit = "5.9.2"
+    const val mockk = "1.13.4"
+    const val kotest_assertions = "5.5.4"
 }
 
 object Deps {

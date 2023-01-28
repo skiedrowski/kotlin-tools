@@ -23,6 +23,11 @@ configure<org.jetbrains.kotlin.allopen.gradle.AllOpenExtension> {
     annotation("javax.persistence.Entity")
     annotation("javax.ws.rs.ApplicationPath")
     annotation("javax.ws.rs.Path")
+    annotation("jakarta.ejb.Singleton")
+    annotation("jakarta.ejb.Stateless")
+    annotation("jakarta.persistence.Entity")
+    annotation("jakarta.ws.rs.ApplicationPath")
+    annotation("jakarta.ws.rs.Path")
 }
 
 
@@ -34,6 +39,12 @@ configure<org.jetbrains.kotlin.noarg.gradle.NoArgExtension> {
     annotation("javax.ws.rs.Path")
     annotation("javax.xml.bind.annotation.XmlRootElement")
     annotation("javax.xml.bind.annotation.XmlAccessorType")
+    annotation("jakarta.ejb.Singleton")
+    annotation("jakarta.ejb.Stateless")
+    annotation("jakarta.persistence.Entity")
+    annotation("jakarta.ws.rs.Path")
+    annotation("jakarta.xml.bind.annotation.XmlAccessorType")
+    annotation("jakarta.xml.bind.annotation.XmlRootElement")
 }
 
 dependencies {
